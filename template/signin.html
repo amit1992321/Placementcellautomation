@@ -1,0 +1,22 @@
+{% extends 'new_base.html'%}
+{% block content %}<div class="container">
+  <form class="form-signin" action="{% url  'signin' %}" method="POST">
+    {% csrf_token %}
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    
+    <label for="inputusername" class="sr-only">Username</label>
+    <input type="test" name="username" id="username" class="form-control" placeholder="Username" required autofocus>
+    <br />
+
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" name="password" id="password"  class="form-control" placeholder="Password" required autofocus >
+    <div class="checkbox mb-3">
+      <label>
+        <p class="text-danger">{{error}}</p>
+      </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
+  </form>
+</div>
+{% endblock%}

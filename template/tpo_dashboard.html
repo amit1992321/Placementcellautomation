@@ -1,0 +1,26 @@
+{% extends 'new_base.html' %}
+
+{% block content %}
+
+<div claas="container">
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="card">
+				<div class="card-body">
+      	<h5 class="card-title"> Student Application Summary</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="{% url 'stu_app' %}" class="btn btn-primary">List of Student Application </a>
+      			</div>
+    		</div>
+  		</div>
+  		<div class="col-sm-6">
+    		<div class="card">
+      			<div class="card-body">
+        <h5 class="card-title">Job Post Summary</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="{% url 'stu_app' %}" class="btn btn-primary">List of Job Post</a>
+      			</div>
+    		</div>
+  		</div>
+	</div>
+</div>{% endblock %}

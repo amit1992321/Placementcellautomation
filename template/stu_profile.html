@@ -1,0 +1,37 @@
+{% extends 'new_base.html' %}
+
+{% block content %}
+
+<div claas="container">
+	<div class="row">
+		<div class="col-sm-4">
+			<div class="card">
+				<div class="card-body">
+      	<h5 class="card-title"> Personal Information </h5>
+        <p class="card-text">Please Enter The Personal Information and Edit</p>
+        <a href="{% url 'stu_regper' %}" class="btn btn-primary">Edit Information </a>
+      	</div>
+    	</div>
+  	</div>
+  		<div class="col-sm-4">
+    		<div class="card">
+      			<div class="card-body">
+        <h5 class="card-title">Educational Information</h5>
+        <p class="card-text">Please Enter The Educational Information and Edit.</p>
+        <a href="{% url 'stu_regedu' %}" class="btn btn-primary">Edit Information</a>
+      			</div>
+    		</div>
+  		</div>
+      <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+        <h5 class="card-title">Professional Information</h5>
+        <p class="card-text">Please Enter The Proffesional Information and Edit</p>
+        <a href="{% url 'stu_regpro' %}" class="btn btn-primary">Edit Information</a>
+            </div>
+        </div>
+      </div>
+	</div>
+</div>
+
+{% endblock %}

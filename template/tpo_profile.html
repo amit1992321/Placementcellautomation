@@ -1,0 +1,29 @@
+{% extends 'new_base.html' %}
+
+{% block content %}
+PRofile
+<div claas="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+        <h5 class="card-title"> Company Details</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="{% url 'edit_comp_details' %}" class="btn btn-primary">Edit Company Details </a>
+            </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+        <h5 class="card-title">Employee</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="{% url 'emp_profile_edit' %}" class="btn btn-primary">Edit Employee Details</a>
+            </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+{% endblock %}

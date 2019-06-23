@@ -1,0 +1,23 @@
+{% extends 'new_base.html'%}
+ss{% block content %} 
+<div class="container">
+<form action="{% url 'post_job_apply_submit' %}" method="POST">
+  {% csrf_token %}
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="skills">Skills</label>
+      <input type="type" class="form-control" id="skills" placeholder="{{obj.skills}}">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="achievement">Achievement</label>
+      <input type="password" class="form-control" id="achievement" placeholder="{{obj.achievement}}">
+    </div>
+  </div>
+  <div class="form-group">
+      <label for="skills">UPLOAD Resume</label>
+      <input type="file" class="form-control" id="skills" placeholder="Upload Resume">
+    </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+{% endblock %}

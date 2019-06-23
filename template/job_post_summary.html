@@ -1,0 +1,32 @@
+{% extends 'new_base.html' %}
+
+{% block content %}
+<div class="container"><div class='table-responsive'>
+<table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Job Profile</th>
+      <th scope="col">Job Vacancy</th>
+      <th scope="col">Job Decription</th>
+      <th scope="col">CTC(Approx)</th>
+      <th scope="col">Interview Date</th>
+    </tr>
+  </thead>
+  <tbody>
+   {% for stu in stu_list %}
+   		<tr>
+      		<th scope="row">{{stu.id}}</th>
+      		<td>{{stu.job_Profile}}</td>
+          <td>{{stu.job_vacancy}}</td>
+      		<td>{{stu.job_description}}</td>
+      		<td>{{stu.job_ctc}}</td>
+      		<td>{{stu.interview_date}}</td>
+    	</tr>
+   {% endfor%}
+  </tbody>
+</table>
+</div>
+</div>
+
+{% endblock %}

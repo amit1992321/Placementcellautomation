@@ -1,0 +1,54 @@
+{% extends 'new_base.html'%}
+ss{% block content %} 
+<div class="container">
+  <form method="POST" action="{% url 'emp_comp_post' %}">
+    {% csrf_token %}
+
+    <h3>Please select Company from dropdown -</h3>
+
+    <div class="form-group col-md-4">
+      <label for="inputState">Select Company</label>
+      <select id="inputState" name="company" class="form-control">
+        <option selected>Choose...</option>
+        {% for c in all_company %}
+        <option>{{ c.company_name }}</option>
+        {% endfor %}
+      </select>
+    </div>  
+
+
+    <h3>------------- or ------------</h3>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <div class="form-group col-md-4">
+          <label for="inputState">Industry Type</label>
+          <select id="inputState" name="industry_type" class="form-control">
+            <option selected>Choose...</option>
+            {% for c in all_company %}
+            <option>{{ c.industry_type }}</option>
+            {% endfor %}
+          </select>
+        </div>  
+      </div>
+      <div class="form-group col-md-6">
+        <label for="highschoolboard"> Company Name</label>
+        <input type="text" class="form-control"  name="company_name" id="highschoolboard" placeholder="Enter Company Name">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="interschoolname">Company Address</label>
+        <input type="text" class="form-control"  name="company_address" id="interschoolname" placeholder="Enter Company Address">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="interschoolboard">Registration No</label>
+        <input type="text" class="form-control"  name="registration_no" id="interschoolboard" placeholder="Registration No">
+      </div>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock %}

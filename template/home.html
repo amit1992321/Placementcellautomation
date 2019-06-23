@@ -1,0 +1,85 @@
+{% extends 'new_base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+
+
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">About</li>
+    </ol>
+  </nav>
+  <br />
+  <br />
+  <br />
+  <div class="row">
+    <div class="col-sm-6 col-6 col-md-6">
+     <div class="card" style="width: '100%';">
+      <img class="card-img-top" width='30px'height='100px' src="{% static 'img/employer.png' %}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Employer Login</h5>
+        <p class="card-text">Explore The Availability of student in Our Campus In Your Desired Field</p>
+        <a href="{% url 'signin' %}" class="btn btn-outline-primary">Sign In</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-6 col-md-6">
+   <div class="card" style="width: '100%';">
+    <img class="card-img-top" width='30px'height='120px' src="{% static 'img/student.png' %}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Student Login</h5>
+      <p class="card-text">One Plce to search for yout dream Job</p>
+      <a href="{% url 'signin' %}" class="btn btn-outline-primary">Sign In</a>
+      
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+<br />
+<br />
+<br />
+
+<div class="row">
+  <div class="col-sm-8 col-8 col-md-8">
+   <div font='24px'  class="content-main">
+    <h3 class="text-left">About Chandigarh University</h3>
+    <h4 class="text-left">Placement @ Chandigarh</h4>
+    Adjudged as ‘University with Best Placements’, Chandigarh University has become an undisputed leader in the region. Surge in corporate of 60% visiting the university stands testimony to the excellent performance by our Alumni in the respective fields. Chandigarh University has become the first university in India to hold Limca Book of Records for Highest Number of Companies in one academic year.
+
+    The focused approach of the university towards persistent and multidimensional training of students in-line with the industry expectations and establishment of industry sponsored labs for hands-on-learning has led to a sharp increase in the number of placement offers and record salary packages.
+
+    Unlike most institutions CU does not restrict its students to one or two companies, our students have grabbed multiple offers, highest number being 8 companies. Apart from core companies’ students are also allowed to sit in interdisciplinary branch selection process.
+
+    Engineering streams were able to grab dream jobs and lucrative packages in Top MNC’s such as Amazon, Microsoft, SAP Labs, VMWare, HP, Deloitte, Cognizant, Sapient, Hitachi, Practo Technologies, Flipkart, Gwynniebee India, Zomato.Com, L& T, TAFE, John Deere, Schindler, Deepak Nitrate. Whereas, Management saw an upward trend with domain specific companies in banking and insurance, retail, FMCG, Business Analytics, manufacturing and hospitality sectors with highest package being Rs. 14 LPA.
+
+    Hospitality students got the global opportunities to be placed at World’s happiest place – Walt Disney. Aviation sector placements saw massive growth with airlines such as Vistara, Jet Airways & Indigo. Animation students grabbed lucrative positions in Prime Focus and Cognizant.
+
+    CU has set new record with Joint Placement Drive for Hewlett Packard in which more than 13000 Students participated. Other than Hewlett Packard, Practo Technologies, Directi have held their Joint placement drives at CU in year 2017. Reputed institutions such as NIT Jalandhar, NIT Hamirpur, IIT Ropar, BITS have participated for the same.
+
+    Year 2017 has been a dream-run for students of Chandigarh University, with more than 492 Top MNC's on campus made 5134 offers with Rs. 31.77 LPA being the highest package offered.
+  </div>
+</div>
+<div class="col-sm-4 col-4 col-md-4">
+	<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+		<h3>Notification</h3>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="{% static 'img/notify_1.jpg' %}" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="{% static 'img/notify_2.jpg' %}" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="{% static 'img/notify_3.jpg' %}" alt="Third slide">
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+</div>
+{% endblock%}

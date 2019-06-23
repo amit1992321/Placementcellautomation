@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{% block title%} Employer Registrationi {% endblock%}
+{% block article %} 
+<div align="center">
+    <div>
+        <form action="{% url 'tpo_reg'%}" method="POST">
+            {{tpo_reg_.as_p}}
+            {{tpo_reg_.error}}
+            <input type="Submit" name="Submit">
+
+        </form>
+            }
+
+
+    </div>
+
+
+</div>
+
+
+
+{% endblock %}

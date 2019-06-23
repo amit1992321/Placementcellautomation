@@ -1,0 +1,73 @@
+{% load static %}
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title%}Title{%endblock%}</title>
+<link rel="stylesheet" href="{% static 'css/style.css' %}"></header>
+
+</head>
+<body>
+<header id="pageHeader">
+</header>
+  <nav id="mainNav">
+    <div class="mainNav">
+
+   
+{% if user.is_authenticated %}
+ {% for group in user.groups.all %}
+   {% if group.name == 'Student'  %}
+       
+    <a href="{% url 'home_page' %}">Home</a><br><br>
+    <a href="{% url 'stu_dash' %}">Student Dashboard</a><br><br>
+    <a href="{% url 'stu_regper' %}">Student Registration Personal</a><br><br>
+    <a href="{% url 'stu_regedu' %}">Student Registration Education</a><br><br>
+    <a href="{% url 'stu_regpro' %}">Student Registration Proffesional</a><br><br>
+    <a href="{% url 'contact_us'%}">Contact</a><br><br>
+    <a href="{% url 'developer' %}">Developer</a><br><br>
+    <a href="{% url 'logout' %}">Logout</a><br><br>
+
+    {% elif group.name == 'tpo_group' %}
+    <a href="{% url 'home_page' %}">Home</a><br><br>
+    <a href="{% url 'tpo_reg' %}">TPO Registration</a><br><br>
+    <a href="{% url 'tpo_dash' %}">TPO Dashboard</a><br><br>
+    <a href="{% url 'contact_us'%}">Contact</a><br><br>
+    <a href="{% url 'developer' %}">Developer</a><br><br>
+    <a href="{% url 'logout' %}">Logout</a><br><br>
+   {% elif group.name == 'employer'  %} 
+    <a href="{% url 'home_page' %}">Home</a><br><br>
+    <a href="{% url 'emp_dash' %}">Employee Dashboard</a><br><br>
+    <a href="{% url 'emp_job' %}">Job Post</a><br><br>
+    <a href="{% url 'emp_reg' %}">Employer Registration</a><br><br>
+    <a href="{% url 'contact_us'%}">Contact</a><br><br>
+    <a href="{% url 'developer' %}">Developer</a><br><br>
+    <a href="{% url 'logout' %}">Logout</a><br><br>
+
+   
+{% endif %}
+{% endfor %}
+{% else %}
+<a href="{% url 'home_page' %}">Home</a><br><br>
+    <a href="{% url 'stu_signin'%}">Student Sign In</a><br> <br>
+    <a href="{% url 'stu_signup' %}">Student Sign Up</a><br><br>
+    <a href="{% url 'emp_signin'%}">Employer Sign In</a><br><br>
+    <a href="{% url 'emp_signup' %}">Employer Signup</a><br><br>
+    <a href="{% url 'tpo_signin'%}">TPO Sign In</a><br><br>
+    <a href="{% url 'tpo_signup' %}">TPO Sign Up</a><br><br> 
+    <a href="{% url 'contact_us'%}">Contact</a><br><br>
+    <a href="{% url 'developer' %}">Developer</a><br><br>
+    <a href="{% url 'logout' %}">Logout</a><br><br>
+{% endif %}
+</div>
+  </nav>
+  <article id="mainArticle">
+
+{%block article %}
+ Article
+ {% endblock %}
+  </article>
+ 
+  <div id="siteAds"></div>
+  <footer id="pageFooter">Footer</footer>
+</body>
+</html>

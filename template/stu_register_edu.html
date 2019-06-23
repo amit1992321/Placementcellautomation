@@ -1,0 +1,101 @@
+{% extends 'new_base.html'%}
+ss{% block content %} 
+<div class="container">
+<form method="POST" action="{% url 'stu_regedu' %}">
+  {% csrf_token %}
+
+<div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="highschoolname">High School Name</label>
+      <input type="text" class="form-control"  name="high_school_name" id="highschoolname" value="{{obj.high_school_name}}">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="highschoolboard">High School Board</label>
+      <input type="text" class="form-control"  name="high_school_board" id="highschoolboard" value="{{obj.high_school_board}}">
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="interschoolname">Inter School Name</label>
+      <input type="text" class="form-control"  name="inter_school_name" id="interschoolname" value="{{obj.inter_school_name}}">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="interschoolboard">Inter School Board</label>
+      <input type="text" class="form-control"  name="inter_School_board" id="interschoolboard" value="{{obj.inter_School_board}}">
+    </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="bachlorscollagename">Bachlors Collage Name</label>
+      <input type="text" class="form-control"  name="bachlors_collage_name" id="bachlorscollagename" value="{{obj.bachlors_collage_name}}">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="pgcollagename">PG Collage Name</label>
+      <input type="text" class="form-control"  name="pg_collage_name" id="bachlorscollagename" value="{{obj.pg_collage_name}}">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="highschoolgrade">High School Grade</label>
+      <input type="text" class="form-control" name="highschool_grade" id="highschoolgrade" value="{{obj.highschool_grade}}">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="highschoolobtainmarks">High School Obtain Marks</label>
+      <input type="text" class="form-control" name="highschool_obtain_marks"  id="highschoolobtainmarks" value="{{obj.highschool_obtain_marks}}">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="highschoolmaxmarks">High School Max Marks</label>
+      <input type="text" class="form-control"  name="highschool_max_marks" id="highschoolmaxmarks" value="{{obj.highschool_max_marks}}">
+    </div>
+  </div>
+  
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="intergrade">Inter Grade</label>
+      <input type="text" class="form-control"  name="inter_grade" id="intergrade" value="{{obj.inter_grade}}">
+    </div>
+     <div class="form-group col-md-4">
+      <label for="interobtainmarks">Inter Obtain Marks</label>
+      <input type="text" class="form-control"  name="inter_obtain_marks" id="interobtainmarks" value="{{obj.inter_obtain_marks}}">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="intermaxmarks">Inter Max Marks</label>
+      <input type="text" class="form-control"  name="inter_max_marks" id="intermaxmarks" value="{{obj.inter_max_marks}}">
+    </div>
+  </div>
+
+<div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="bachlorsdegree">Bachlors Degree</label>
+      <input type="text" class="form-control"  name="bachalors_pursuing" id="bachlorsdegree" value="{{obj.bachalors_pursuing}}">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="bachlorsobtainmarks">Bachlors Obtain Marks</label>
+      <input type="text" class="form-control"  name="bachalors_obtain_marks" id="bachlorsobtainmarks" value="{{obj.high_school_name}}">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="bachlorsmaxmarks">Bachlors Max Marks</label>
+      <input type="text" class="form-control"  name="bachalors_max_marks" id="bachlorsmaxmarks" value="{{obj.bachalors_obtain_marks}}">
+    </div>
+     </div>
+
+<div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="postgraduatedegree">Post Graduate Degree</label>
+      <input type="text" class="form-control"  name="pg_pursuing" id="postgraduatedegree" value="{{obj.high_school_name}}">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="postobtainmarks">Post Obtain Marks</label>
+      <input type="text" class="form-control"  name="pg_obtain_marks" id="postobtainmarks" value="{{obj.pg_pursuing}}">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="pgmaxmarks">PG Max Marks</label>
+      <input type="text" class="form-control"  name="pg_total_marks" id="pg_total_marks" value="{{obj.pg_total_marks}}">
+    </div>
+  </div>
+
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+{% endblock %}

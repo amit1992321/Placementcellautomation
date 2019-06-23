@@ -1,0 +1,49 @@
+{% extends 'new_base.html' %}
+
+{% block content %}
+
+<div class="container">
+  <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+  </ol>
+</nav>
+
+{% if not is_emp_obj %}
+<div class="alert alert-danger" role="alert">
+  
+  Your details not provided yet, Please fill <a href="/emp-create-pro/">here</a>
+</div>
+{% endif %}
+
+
+{% if not is_comp_obj %}
+<div class="alert alert-danger" role="alert">
+
+  Company details not provided, Please fill <a href="/emp-company-details/">here</a>
+
+</div>
+{% endif %}
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="card">
+				<div class="card-body">
+      	<h5 class="card-title"> Student Application Summary</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="{% url 'stu_app' %}" class="btn btn-primary">List of Student Application </a>
+      			</div>
+    		</div>
+  		</div>
+  		<div class="col-sm-6">
+    		<div class="card">
+      			<div class="card-body">
+        <h5 class="card-title">Job Post Summary</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="{% url 'job_post' %}" class="btn btn-primary">List of Job Post</a>
+      			</div>
+    		</div>
+  		</div>
+	</div>
+</div>
+{% endblock %}

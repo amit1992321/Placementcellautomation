@@ -1,0 +1,27 @@
+.content-main {
+    text-align: justify;
+    line-height: 26px;
+    letter-spacing: 1px;
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+
+.no-decoration:hover {
+  text-decoration: none;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  height: 500px;
+  padding: 15px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.more-large {
+    height: 150px;
+    line-height: 130px;
+}

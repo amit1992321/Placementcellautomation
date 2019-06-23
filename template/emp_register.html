@@ -1,0 +1,14 @@
+{% extends 'new_base.html'%}
+{% block title%} Employer Registration {% endblock%}
+{% block article %} 
+<div align="center">
+    <div>
+        <form action="{% url 'emp_reg'%}" method="POST">
+        	{% csrf_token %}
+            {{emp_regg.as_p}}
+            {{emp_regg.errors}}
+            <input type="Submit" name="Submit">
+        </form>
+    </div>
+</div>
+{% endblock %}

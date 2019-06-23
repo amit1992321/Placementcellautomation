@@ -1,0 +1,73 @@
+{% extends 'new_base.html'%}
+ss{% block content %} 
+<div class="container">
+<form action="{% url 'stu_regper' %}" method="POST">
+  {% csrf_token %}
+<!-- 
+<div class="form-row">
+    <div class="form-group col-md-6">
+      <input type="text" class="form-control" name="user"  value={{obj}}  hidden>
+</div></div> -->
+<div class="form-group col-md-4">
+      <label for="inputuser"></label>
+      <select id="inputuser" class="form-control" name="user" hidden>
+        <option selected>{{request.user}}</option>
+        <option></option>
+        <option></option>
+        <option></option>
+      </select>
+    </div> 
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="uid">UID</label>
+      <input type="text" class="form-control" id="uid" name='uid' value="{{obj.uid}}">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="image">Image</label>
+      <input type="text" class="form-control" name='image' id="image" value="obj.image">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+    <label for="mobileno">Mobile</label>
+    <input type="text" class="form-control" name='mobile' id="mobileno" value="{{obj.mobile}}">
+     </div>
+     <div class="form-group col-md-6">
+      <label for="alternatemobile">Alternate Mobile No</label>
+    <input type="text" class="form-control" name='alternate_mobile' id="alternatemobile" value="{{obj.alternate_mobile}}">
+  </div>
+</div>
+<div class="form-row">
+    <div class="form-group col-md-6">
+    <label for="temperoryaddress">Temperory Address</label>
+    <input type="text" class="form-control" name='temperory_address' id="temperoryaddress" value="{{obj.temperory_address}}">
+     </div>
+     <div class="form-group col-md-6">
+      <label for="permanentaddress"> Permanent Address</label>
+    <input type="text" class="form-control" name='permanent_address' id="permanent_address" value="{{obj.permanent_address}}">
+  </div>
+</div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="fathername">Father Name</label>
+      <input type="text" class="form-control" id="father_name" name='father_name' value="{{obj.father_name}}">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="mothername">Mother Name</label>
+      <input type="text" class="form-control" id="mother_name" name='mother_name' value="{{obj.mother_name}}">
+    </div>
+    {{request.user}}
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputgender">Gender</label>
+      <select id="inputgender" class="form-control" name="gender">
+        <option selected>{{obj.gender}}</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+    </div>  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+{% endblock %}

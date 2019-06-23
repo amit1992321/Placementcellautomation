@@ -1,0 +1,45 @@
+{% extends 'new_base.html' %}
+{% block content %}
+ 
+    <div class="container">
+<form action="{% url 'stu_signup' %}" method="POST" >
+  {% csrf_token %}
+<div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="username">User Name</label>
+      <input type="text" name="username" class="form-control" id="username"  placeholder="Username" >
+    </div>
+    <div class="form-group col-md-6">
+      <label for="first_name">First Name</label>
+      <input type="text" class="form-control" name="first_name" id="first_name"  placeholder="First Name">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+    <label for="last_name">Last Name</label>
+    <input type="text" class="form-control" name="last_name" id="last_name"  placeholder="Last Name">
+  </div>
+  <div class="form-group col-md-6">
+      <label for="mobile">Mobile</label>
+      <input type="number" class="form-control" name="mobile" id="mobile" placeholder="Mobile No.">
+    </div>
+ </div>
+ <div class="form-group">
+  	<label for="email">Email</label>
+    <input type="email" class="form-control" name="email"  id="email" placeholder="Email">
+  </div>
+ <div class="form-row">
+    <div class="form-group col-md-6">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" name="password" id="password"  placeholder="Enter Password">
+  </div>
+  <div class="form-group col-md-6">
+      <label for="repassword">Conform Password</label>
+      <input type="password" class="form-control" name="repassword" id="repassword" placeholder="Conform Password">
+    </div>
+ </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>  
+{% endblock %}
